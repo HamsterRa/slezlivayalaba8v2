@@ -153,7 +153,7 @@ namespace laba_8_oaip
             {
                 check();
                 int poinx = Convert.ToInt32(Cordinate.Text.Split(' ')[0]), poiny = Convert.ToInt32(Cordinate.Text.Split(' ')[1]);
-                SnowMan snowMan = new SnowMan(poinx, poiny, Width, Height);
+                kakaxa snowMan = new kakaxa(poinx, poiny, Width, Height);
                 snowMan.Draw();
                 comboBox1.Items.Add("Снеговик " + repit);
                 ShapeContainer.AddFigure(snowMan);

@@ -7,7 +7,7 @@ using static laba_8_oaip.Form1;
 
 namespace laba_8_oaip
 {
-    internal class SnowMan : Figure
+    internal class kakaxa : Figure
     {
         public Figure[] shape = new Figure[5];
         public int poinx, poiny;
@@ -15,7 +15,7 @@ namespace laba_8_oaip
         public int height = 1;
 
 
-        public SnowMan( int x, int y, int w, int h)
+        public kakaxa( int x, int y, int w, int h)
         {
             poinx = x;
             poiny = y;
@@ -27,13 +27,13 @@ namespace laba_8_oaip
             
             // два элипса
 
-            Elips elipsForSnowMan1 = new Elips(poinx, poiny+(height*6/9), widht, height * 3/3);
-            elipsForSnowMan1.Draw();
-            shape[0] = (elipsForSnowMan1);
+            Elips elipsFormy1 = new Elips(poinx, poiny+(height*6/9), widht, height * 3/3);
+            elipsFormy1.Draw();
+            shape[0] = (elipsFormy1);
 
-            Elips elipsForSnowMan2 = new Elips(poinx+(widht*5/20), poiny+(height*9/10), widht*5/10, height*5/10);
-            elipsForSnowMan2.Draw();
-            shape[1] = (elipsForSnowMan2);
+            Elips elipsFormy2 = new Elips(poinx+(widht*5/20), poiny+(height*9/10), widht*5/10, height*5/10);
+            elipsFormy2.Draw();
+            shape[1] = (elipsFormy2);
             
 
             // треугольник 
@@ -46,21 +46,10 @@ namespace laba_8_oaip
             pointsy.Add((poiny) + height*2/10);
             pointsy.Add((poiny) + height*17/10);
             pointsy.Add((poiny) + height*17/10);
-            Tringular triForSnowMan = new Tringular(3, pointsx, pointsy);
-            triForSnowMan.Draw();
-            shape[2] = (triForSnowMan);
-           
-            // Прямоугольник
-            
-           /* Figure rectangleForSnowMan = new Rectangle(poinx+widht*2/15, poiny+(height*1/6),widht*8/10, height*1/6);
-            rectangleForSnowMan.Draw();
-            shape[3] = (rectangleForSnowMan);
-
-            int xa = poinx + widht * 4 / 11;
-            Figure rectangleForSnowMan2 = new Rectangle(xa, poiny ,widht*1/3, height*1/3);
-            rectangleForSnowMan2.Draw();
-            shape[4] = (rectangleForSnowMan2);
-        */
+            Tringular triFormy = new Tringular(3, pointsx, pointsy);
+            triFormy.Draw();
+            shape[2] = (triFormy);
+          
         }
         public override void Selection()
         {
