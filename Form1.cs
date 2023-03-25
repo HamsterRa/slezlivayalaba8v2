@@ -155,7 +155,7 @@ namespace laba_8_oaip
                 int poinx = Convert.ToInt32(Cordinate.Text.Split(' ')[0]), poiny = Convert.ToInt32(Cordinate.Text.Split(' ')[1]);
                 kakaxa snowMan = new kakaxa(poinx, poiny, Width, Height);
                 snowMan.Draw();
-                comboBox1.Items.Add("Снеговик " + repit);
+                comboBox1.Items.Add("Бермуд " + repit);
                 ShapeContainer.AddFigure(snowMan);
             }
             repit++;

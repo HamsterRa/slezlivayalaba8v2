@@ -290,13 +290,13 @@
             // radioButton7
             // 
             this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(796, 198);
+            this.radioButton7.Location = new System.Drawing.Point(828, 199);
             this.radioButton7.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(116, 29);
+            this.radioButton7.Size = new System.Drawing.Size(62, 29);
             this.radioButton7.TabIndex = 13;
             this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "SnowMan";
+            this.radioButton7.Text = "my";
             this.radioButton7.UseVisualStyleBackColor = true;
             // 
             // buttonSelectFigure
