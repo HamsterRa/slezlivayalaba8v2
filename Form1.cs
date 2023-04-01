@@ -167,26 +167,22 @@ namespace laba_8_oaip
 
         private void radioButton1_Click(object sender, EventArgs e)
         {
-            labelCountPoints.Visible = false;
-            textBoxCountPoints.Visible = true;
+            
         }
 
         private void radioButton2_Click(object sender, EventArgs e)
         {
-            labelCountPoints.Visible = false;
-            textBoxCountPoints.Visible = false;
+            
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            labelCountPoints.Visible = false;
-            textBoxCountPoints.Visible = false;
+            
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
-            labelCountPoints.Visible = false;
-            textBoxCountPoints.Visible = false;
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -196,8 +192,7 @@ namespace laba_8_oaip
 
         private void radioButton6_CheckedChanged(object sender, EventArgs e)
         {
-            labelCountPoints.Visible = false;
-            textBoxCountPoints.Visible = false;
+            
         }
 
         private void buttonSelectFigure_Click(object sender, EventArgs e)
@@ -215,9 +210,20 @@ namespace laba_8_oaip
 
         private void buttonMove_Click(object sender, EventArgs e)
         {
+            if(comboBox1.SelectedIndex == -1) return;
             Figure figyra = ShapeContainer.figureList[comboBox1.SelectedIndex];
             int x = Convert.ToInt32(textBoxMove.Text.Split(' ')[0]), y = Convert.ToInt32(textBoxMove.Text.Split(' ')[1]);
-            if (pictureBox1.ClientSize.Width >= figyra.x + x + figyra.width && pictureBox1.ClientSize.Height >= figyra.y + y + figyra.height)
+
+            if (figyra is Polygon)
+            {
+                figyra.MoveTo(x, y);
+                for (int i = 0; i < ShapeContainer.figureList.Count; i++)
+                {
+                    ShapeContainer.figureList[i].Draw();
+                }
+            }
+
+            else if (pictureBox1.ClientSize.Width >= figyra.x + x + figyra.width && pictureBox1.ClientSize.Height >= figyra.y + y + figyra.height)
                 {
                     if (figyra.y + y >= 0 && figyra.x + x >= 0)
                     {

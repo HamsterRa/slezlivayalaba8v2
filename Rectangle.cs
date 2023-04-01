@@ -15,7 +15,7 @@ namespace laba_8_oaip
             this.y = y;
             this.width = width;
             this.height = height;
-            this.mg = false;
+            
         }
         public Rectangle()
         {

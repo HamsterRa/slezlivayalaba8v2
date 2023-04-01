@@ -23,6 +23,10 @@ namespace laba_8_oaip
             this.pointsx = pointsx;
             this.pointsy = pointsy;
             CountOfPoints = Count;
+            this.x = pointsx.Min();
+            this.y = pointsy.Min();
+            this.width = pointsx.Max() - x;
+            this.height = pointsx.Max() - y;
             mg = true;
         }
         public override void Draw()
@@ -50,34 +54,25 @@ namespace laba_8_oaip
         }
         public override void MoveTo(int x, int y)
         {
-            Selection();
-            bool flag = true;
-            for (int i = 0; i < pointsx.Count; i++)
+            this.Selection();
+            Graphics g = Graphics.FromImage(Init.bitmap);
+            Point[] mas_point = new Point[CountOfPoints];
+            List<int> lx = pointsx;
+            List<int> ly = pointsy;
+            for (int i = 0; i < mas_point.Length; i++)
             {
-                
-                if (pointsx[i] + x > Init.pictureBox.ClientSize.Width || pointsx[i] + x < 0) { flag = false; break; }
-               
-                 if (p) { flag = false; break; }
-                if (pointsy[i] + y > Init.pictureBox.ClientSize.Height) { flag = false; break; }
-                if (pointsy[i] + y < 0) { flag = false; break; }
-            }
-            if (flag)
-            {
-                Point[] mas_point = new Point[CountOfPoints];
-                for (int i = 0; i < mas_point.Length; i++)
+                if (lx[i] + x >= Init.bitmap.Width || lx[i] + x < 0 || ly[i] + y >= Init.bitmap.Height || ly[i] + y < 0)
                 {
-                    pointsx[i] = pointsx[i] + x;
-                    pointsy[i] = pointsy[i] + y;
-                    mas_point[i] = new Point(pointsx[i], pointsy[i]);
+                    MessageBox.Show("Невозможно передвинуть фигуру");
+                    return;
                 }
-                Graphics g = Graphics.FromImage(Init.bitmap);
-                g.DrawPolygon(Init.pen, mas_point);
-                Init.pictureBox.Image = Init.bitmap;
+
+                lx[i] = pointsx[i] + x;
+                ly[i] = pointsy[i] + y;
+                mas_point[i] = new Point(lx[i], ly[i]);
             }
-            else
-            {
-                MessageBox.Show("НЕльзя");
-            }
+            g.DrawPolygon(Init.pen, mas_point);
+            Init.pictureBox.Image = Init.bitmap;
         }
     }
 }

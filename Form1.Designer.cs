@@ -58,19 +58,19 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BackColor = System.Drawing.Color.AntiqueWhite;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(32, 30);
+            this.pictureBox1.Location = new System.Drawing.Point(40, 81);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(608, 773);
+            this.pictureBox1.Size = new System.Drawing.Size(1114, 809);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(670, 74);
+            this.radioButton1.Location = new System.Drawing.Point(1311, 192);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(103, 29);
@@ -83,7 +83,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(670, 109);
+            this.radioButton2.Location = new System.Drawing.Point(1311, 225);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(74, 29);
@@ -96,7 +96,7 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(670, 144);
+            this.radioButton3.Location = new System.Drawing.Point(1311, 258);
             this.radioButton3.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(168, 29);
@@ -109,7 +109,7 @@
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(919, 74);
+            this.radioButton4.Location = new System.Drawing.Point(1311, 94);
             this.radioButton4.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(85, 29);
@@ -149,7 +149,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.ColWidth);
             this.groupBox1.Controls.Add(this.ColHeight);
-            this.groupBox1.Location = new System.Drawing.Point(670, 282);
+            this.groupBox1.Location = new System.Drawing.Point(1197, 328);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
@@ -196,7 +196,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(75, 164);
+            this.button1.Location = new System.Drawing.Point(60, 167);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(162, 34);
@@ -256,7 +256,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(679, 531);
+            this.comboBox1.Location = new System.Drawing.Point(1301, 580);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(242, 33);
@@ -265,7 +265,7 @@
             // radioButton5
             // 
             this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(919, 109);
+            this.radioButton5.Location = new System.Drawing.Point(1311, 127);
             this.radioButton5.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(166, 29);
@@ -277,7 +277,7 @@
             // radioButton6
             // 
             this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(919, 142);
+            this.radioButton6.Location = new System.Drawing.Point(1311, 158);
             this.radioButton6.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton6.Name = "radioButton6";
             this.radioButton6.Size = new System.Drawing.Size(140, 29);
@@ -290,7 +290,7 @@
             // radioButton7
             // 
             this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(828, 199);
+            this.radioButton7.Location = new System.Drawing.Point(1311, 293);
             this.radioButton7.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton7.Name = "radioButton7";
             this.radioButton7.Size = new System.Drawing.Size(62, 29);
@@ -301,7 +301,7 @@
             // 
             // buttonSelectFigure
             // 
-            this.buttonSelectFigure.Location = new System.Drawing.Point(676, 594);
+            this.buttonSelectFigure.Location = new System.Drawing.Point(1298, 643);
             this.buttonSelectFigure.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSelectFigure.Name = "buttonSelectFigure";
             this.buttonSelectFigure.Size = new System.Drawing.Size(118, 36);
@@ -312,7 +312,7 @@
             // 
             // buttonMove
             // 
-            this.buttonMove.Location = new System.Drawing.Point(804, 594);
+            this.buttonMove.Location = new System.Drawing.Point(1426, 643);
             this.buttonMove.Margin = new System.Windows.Forms.Padding(4);
             this.buttonMove.Name = "buttonMove";
             this.buttonMove.Size = new System.Drawing.Size(138, 36);
@@ -325,7 +325,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1226, 855);
+            this.BackColor = System.Drawing.Color.RosyBrown;
+            this.ClientSize = new System.Drawing.Size(1705, 1112);
             this.Controls.Add(this.buttonMove);
             this.Controls.Add(this.buttonSelectFigure);
             this.Controls.Add(this.radioButton7);

@@ -12,13 +12,17 @@ namespace laba_8_oaip
         public List<int> pointsx = new List<int>();
         public List<int> pointsy = new List<int>();
         public int CountOfPoints = 3;
-        public bool mg = true;
+  
         public Tringular() { }
         public Tringular(int Count, List<int> pointsx, List<int> pointsy)
         {
             this.pointsx = pointsx;
             this.pointsy = pointsy;
             CountOfPoints = Count;
+            this.x = pointsx.Min();
+            this.y = pointsy.Min();
+            this.width =  pointsx.Max() - x;
+            this.height = pointsx.Max() - y;
             mg = true;
         }
         public override void Draw()
@@ -49,11 +53,19 @@ namespace laba_8_oaip
             this.Selection();
             Graphics g = Graphics.FromImage(Init.bitmap);
             Point[] mas_point = new Point[CountOfPoints];
+            List<int> lx= pointsx;
+            List<int> ly= pointsy;
             for (int i = 0; i < mas_point.Length; i++)
             {
-                pointsx[i] = pointsx[i] + x;
-                pointsy[i] = pointsy[i] + y;
-                mas_point[i] = new Point(pointsx[i], pointsy[i]);
+                if (lx[i] + x >= Init.bitmap.Width || lx[i] + x < 0 || ly[i] + y >= Init.bitmap.Height || ly[i] + y < 0)
+                {
+                    MessageBox.Show("Невозможно передвинуть фигуру");
+                    return;
+                }
+
+                lx[i] = pointsx[i] + x;
+                ly[i] = pointsy[i] + y;
+                mas_point[i] = new Point(lx[i], ly[i]);
             }
             g.DrawPolygon(Init.pen, mas_point);
             Init.pictureBox.Image = Init.bitmap;
